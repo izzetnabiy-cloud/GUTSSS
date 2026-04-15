@@ -5,177 +5,265 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Виртуальная карта VISA</title>
   <link rel="stylesheet" href="index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-  <!-- Icons via CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <nav class="nav-links">
-      <a href="#">ПРЕИМУЩЕСТВА</a>
-      <a href="#">КАК КУПИТЬ КАРТУ?</a>
-      <a href="#">FAQ</a>
-      <a href="#">ОТЗЫВЫ</a>
-    </nav>
-    <div class="nav-right">
-      <div class="work-hours">
-        <span class="work-label">Время работы:</span>
-        <span class="work-time">с 09:00 до 23:00</span>
-      </div>
-      <a href="#" class="tg-btn">
-        <i class="fab fa-telegram-plane"></i>
-        Напишите нам
-      </a>
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="nav-logo">
+    <i class="fas fa-credit-card"></i>
+    <span>виртуальная карта</span>
+  </div>
+  <nav class="nav-links">
+    <a href="#">ПРЕИМУЩЕСТВА</a>
+    <a href="#">КАК КУПИТЬ КАРТУ?</a>
+    <a href="#">FAQ</a>
+    <a href="#">ОТЗЫВЫ</a>
+  </nav>
+  <div class="nav-right">
+    <div class="work-hours">
+      <small>Время работы:</small>
+      <span>с 09:00 до 23:00</span>
     </div>
-  </header>
+    <a href="#" class="tg-btn"><i class="fab fa-telegram-plane"></i> Напишите нам</a>
+  </div>
+</header>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        Купи&nbsp; виртуальную карту VISA Турецкого банка<br />
-        с балансом без документов за 10 минут!
-      </h1>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <h1>Купи&nbsp; виртуальную карту VISA Турецкого банка<br>с балансом без документов за 10 минут!</h1>
 
-      <!-- Card Widget -->
-      <div class="card-widget">
-        <!-- Balance Pill Options LEFT -->
-        <div class="balance-options left-options">
-          <div class="balance-pill">
-            <span class="try">550 TRY</span>
-            <span class="usd">≈ $21</span>
-          </div>
-          <div class="balance-pill">
-            <span class="try">1400 TRY</span>
-            <span class="usd">≈ $53</span>
-          </div>
-        </div>
-
-        <!-- Card Visual -->
-        <div class="card-visual">
-          <div class="card-chip-wave">
-            <div class="chip"></div>
-            <div class="wave-icon">
-              <i class="fas fa-wifi"></i>
-            </div>
-          </div>
-          <div class="card-balance-display">
-            <span class="balance-label">Баланс карты:</span>
-            <div class="balance-amount">
-              <span class="balance-try">2700 TRY</span>
-              <div class="balance-usd-row">
-                <span class="balance-usd">≈ $103</span>
-                <button class="dropdown-btn"><i class="fas fa-chevron-down"></i></button>
-              </div>
-            </div>
-          </div>
-          <div class="card-logo">
-            <span class="visa-text">VISA</span>
-          </div>
-        </div>
-
-        <!-- Balance Pill Options RIGHT -->
-        <div class="balance-options right-options">
-          <div class="balance-pill">
-            <span class="try">4000 TRY</span>
-            <span class="usd">≈ $153</span>
-          </div>
-          <div class="balance-pill">
-            <span class="try">13000 TRY</span>
-            <span class="usd">≈ $500</span>
-          </div>
-          <div class="balance-pill">
-            <span class="try">26000 TRY</span>
-            <span class="usd">≈ $1000</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Buy Button -->
-      <div class="buy-section">
-        <button class="buy-btn">
-          КУПИТЬ КАРТУ
-          <span class="btn-price">$134<sup>89</sup></span>
-        </button>
-        <p class="exchange-note">По курсу QIWI Банк ≈ 10 070 ₽</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MARQUEE + STATS SECTION ===== -->
-  <section class="brands-section">
-    <!-- Top Marquee Row -->
-    <div class="marquee-wrapper top-marquee">
-      <div class="marquee-track">
-        <span class="brand-item"><i class="fab fa-steam"></i> STEAM</span>
-        <span class="brand-item"><strong>NETFLIX</strong></span>
-        <span class="brand-item"><i class="fab fa-youtube"></i> YouTube</span>
-        <span class="brand-item"><i class="fab fa-xbox"></i> XBOX LIVE</span>
-        <span class="brand-item">Üdemy</span>
-        <span class="brand-item"><i class="fab fa-playstation"></i> PlayStation Store</span>
-        <span class="brand-item"><i class="fab fa-spotify"></i> Spotify</span>
-        <span class="brand-item"><span class="adobe-a">A</span> Adobe</span>
-        <span class="brand-item">· · ·</span>
-        <!-- Duplicate for seamless loop -->
-        <span class="brand-item"><i class="fab fa-steam"></i> STEAM</span>
-        <span class="brand-item"><strong>NETFLIX</strong></span>
-        <span class="brand-item"><i class="fab fa-youtube"></i> YouTube</span>
-        <span class="brand-item"><i class="fab fa-xbox"></i> XBOX LIVE</span>
-        <span class="brand-item">Üdemy</span>
-        <span class="brand-item"><i class="fab fa-playstation"></i> PlayStation Store</span>
-        <span class="brand-item"><i class="fab fa-spotify"></i> Spotify</span>
-        <span class="brand-item"><span class="adobe-a">A</span> Adobe</span>
-      </div>
+  <div class="card-widget">
+    <div class="pills">
+      <div class="pill"><small>550 TRY</small><b>≈ $21</b></div>
+      <div class="pill"><small>1400 TRY</small><b>≈ $53</b></div>
     </div>
 
-    <!-- Middle content row -->
-    <div class="middle-row">
-      <!-- Bottom Marquee LEFT -->
-      <div class="marquee-wrapper bottom-marquee left-half">
-        <div class="marquee-track reverse">
-          <span class="brand-item"><i class="fab fa-xbox"></i> BOX LIVE</span>
-          <span class="brand-item">Üdemy</span>
-          <span class="brand-item"><i class="fab fa-playstation"></i> PlaySt Store</span>
-          <span class="brand-item"><i class="fab fa-spotify"></i> Spotify</span>
-          <span class="brand-item"><span class="adobe-a">A</span> Adobe</span>
-          <span class="brand-item"><i class="fab fa-xbox"></i> BOX LIVE</span>
-          <span class="brand-item">Üdemy</span>
-          <span class="brand-item"><i class="fab fa-playstation"></i> PlaySt Store</span>
-          <span class="brand-item"><i class="fab fa-spotify"></i> Spotify</span>
-          <span class="brand-item"><span class="adobe-a">A</span> Adobe</span>
+    <div class="card-visual">
+      <div class="card-top">
+        <div class="chip"></div>
+        <i class="fas fa-wifi wave"></i>
+      </div>
+      <div class="card-balance">
+        <small>Баланс карты:</small>
+        <span class="bal-try">2700 TRY</span>
+        <div class="bal-row">
+          <span class="bal-usd">≈ $103</span>
+          <button class="drop-btn"><i class="fas fa-chevron-down"></i></button>
         </div>
       </div>
-
-      <!-- Stats block CENTER -->
-      <div class="stats-block">
-        <div class="stats-number">1000+</div>
-        <div class="stats-text">
-          Различных сервисов и веб-сайтов<br />
-          доступны для оплаты с нашими<br />
-          картами
-        </div>
-      </div>
-
-      <!-- Bottom Marquee RIGHT -->
-      <div class="marquee-wrapper bottom-marquee right-half">
-        <div class="marquee-track">
-          <span class="brand-item"><strong>:LIX</strong></span>
-          <span class="brand-item"><i class="fab fa-spotify"></i> Spotify</span>
-          <span class="brand-item"><span class="adobe-a">A</span> Adobe</span>
-          <span class="brand-item"><i class="fab fa-apple"></i> App Store</span>
-          <span class="brand-item">coursera</span>
-          <span class="brand-item"><strong>:LIX</strong></span>
-          <span class="brand-item"><i class="fab fa-spotify"></i> Spotify</span>
-          <span class="brand-item"><span class="adobe-a">A</span> Adobe</span>
-          <span class="brand-item"><i class="fab fa-apple"></i> App Store</span>
-          <span class="brand-item">coursera</span>
-        </div>
-      </div>
+      <div class="card-bottom"><span class="visa">VISA</span></div>
     </div>
 
-  </section>
+    <div class="pills">
+      <div class="pill"><small>4000 TRY</small><b>≈ $153</b></div>
+      <div class="pill"><small>13000 TRY</small><b>≈ $500</b></div>
+      <div class="pill"><small>26000 TRY</small><b>≈ $1000</b></div>
+    </div>
+  </div>
+
+  <div class="buy-area">
+    <button class="buy-btn">КУПИТЬ КАРТУ <span>$134<sup>89</sup></span></button>
+    <p>По курсу QIWI Банк ≈ 10 070 ₽</p>
+  </div>
+</section>
+
+<!-- ===== BRANDS ===== -->
+<section class="brands">
+  <div class="marquee-wrap"><div class="mq-track">
+    <span><i class="fab fa-steam"></i> STEAM</span><span><b>NETFLIX</b></span>
+    <span><i class="fab fa-youtube"></i> YouTube</span><span><i class="fab fa-xbox"></i> XBOX LIVE</span>
+    <span>Üdemy</span><span><i class="fab fa-playstation"></i> PlaySt Store</span>
+    <span><i class="fab fa-spotify"></i> Spotify</span><span>A Adobe</span>
+    <span><i class="fab fa-steam"></i> STEAM</span><span><b>NETFLIX</b></span>
+    <span><i class="fab fa-youtube"></i> YouTube</span><span><i class="fab fa-xbox"></i> XBOX LIVE</span>
+  </div></div>
+
+  <div class="brands-mid">
+    <div class="marquee-wrap half"><div class="mq-track rev">
+      <span><i class="fab fa-xbox"></i> BOX LIVE</span><span>Üdemy</span>
+      <span><i class="fab fa-playstation"></i> PlaySt</span><span><i class="fab fa-spotify"></i> Spotify</span>
+      <span>A Adobe</span><span><i class="fab fa-xbox"></i> BOX LIVE</span>
+      <span>Üdemy</span><span><i class="fab fa-playstation"></i> PlaySt</span>
+    </div></div>
+
+    <div class="stats-block">
+      <div class="stat-num">1000+</div>
+      <p>Различных сервисов и веб-сайтов<br>доступны для оплаты с нашими<br>картами</p>
+    </div>
+
+    <div class="marquee-wrap half"><div class="mq-track">
+      <span><b>:LIX</b></span><span><i class="fab fa-spotify"></i> Spotify</span>
+      <span>A Adobe</span><span><i class="fab fa-apple"></i> App Store</span>
+      <span>coursera</span><span><b>:LIX</b></span>
+      <span><i class="fab fa-spotify"></i> Spotify</span><span>A Adobe</span>
+    </div></div>
+  </div>
+
+  <div class="marquee-wrap"><div class="mq-track rev">
+    <span><i class="fab fa-xbox"></i> BOX LIVE</span><span>Üdemy</span>
+    <span><i class="fab fa-playstation"></i> PlaySt</span><span><i class="fab fa-spotify"></i> Spotify</span>
+    <span>A Adobe</span><span><i class="fab fa-apple"></i> App Store</span>
+    <span>coursera</span><span><i class="fab fa-xbox"></i> BOX LIVE</span>
+    <span>Üdemy</span><span><i class="fab fa-playstation"></i> PlaySt</span>
+  </div></div>
+</section>
+
+<!-- ===== HOW TO BUY ===== -->
+<section class="how">
+  <div class="how-grid">
+    <div class="step"><div class="snum">2</div><p>Нажмите на кнопку "купить карту"</p></div>
+    <div class="how-center"><h2>Как купить карту?</h2><p>Это очень легко</p></div>
+    <div class="step"><div class="snum">1</div><p>Выберите необходимую сумму на счете карты</p></div>
+
+    <div class="step"><div class="snum">3</div><p>Произведите оплату на QIWI Кошелек и свяжитесь с нашим сотрудником в Telegram для получения реквизитов карты</p></div>
+    <div></div>
+    <div class="step"><div class="snum">4</div><p>Получить реквизиты карты и наслаждаться покупками.</p></div>
+  </div>
+</section>
+
+<!-- ===== BENEFITS ===== -->
+<section class="benefits">
+  <div class="ben-col">
+    <div class="ben-item">
+      <div class="ben-icon speed"><i class="fas fa-tachometer-alt"></i></div>
+      <div><h4>Быстрая выдача реквизитов карты</h4><p>Весь процесс занимает не более 10 минут</p></div>
+    </div>
+    <div class="ben-item">
+      <div class="ben-icon shield"><i class="fas fa-shield-alt"></i></div>
+      <div><h4>Сделка полностью конфиденциальна</h4><p>От вас не потребуется предоставление ваших персональных данных.</p></div>
+    </div>
+  </div>
+
+  <div class="ben-center"><h2>Это быстро и легко!</h2><p>Оформи прямо сейчас</p></div>
+
+  <div class="ben-col">
+    <div class="ben-item">
+      <div class="ben-icon pay"><i class="fas fa-qrcode"></i></div>
+      <div><h4>Удобство оплаты</h4><p>Осуществить платеж можно переводом на QIWI кошелек</p></div>
+    </div>
+    <div class="ben-item">
+      <div class="ben-icon dollar"><i class="fas fa-dollar-sign"></i></div>
+      <div><h4>Выгодные цены</h4><p>Во многих сервисах стоимость игр и подписок в Турецком регионе в 2-3 раза дешевле</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="faq-left">
+    <div class="faq-item active">
+      <div class="fq"><i class="fas fa-chevron-right"></i> Вопрос №1</div>
+      <p>Я не нашел нужного мне баланса на сайте. Можно ли заказать карту с требуемым балансом под заказ?</p>
+    </div>
+    <div class="faq-item">
+      <div class="fq"><i class="fas fa-chevron-right"></i> Вопрос №2</div>
+      <p>Почему выгодно оплачивать Турецкими картами?</p>
+    </div>
+    <div class="faq-item">
+      <div class="fq"><i class="fas fa-chevron-right"></i> Вопрос №3</div>
+      <p>Могли ли я проверить остаточный баланс по карте после того как сделал покупку?</p>
+    </div>
+    <div class="faq-item">
+      <div class="fq"><i class="fas fa-chevron-right"></i> Вопрос №4</div>
+      <p>Какие гарантии вы предоставляете?</p>
+    </div>
+  </div>
+
+  <div class="faq-center"><h2>F.A.Q.</h2><p>Часто задаваемые вопросы</p></div>
+
+  <div class="faq-right">
+    <div class="faq-answer">
+      <div class="anum">2</div>
+      <p>Дело в том, что в <b>большинстве зарубежных сервисах</b>, таких как Youtube, Spotify, PSN, App Store и других, стоимость различных подписок, игр и товаров устанавливается в зависимости от конъюнктуры рынка, то есть платежеспособности населения.</p>
+      <p>Вдобавок к этому на данный момент курс лиры находится на историческом минимуме по отношению к доллару, из-за этого стоимость в некоторых сервисах действительно в 2-3 раза ниже чем в других регионах.</p>
+      <div class="author">
+        <div class="avatar"><i class="fas fa-user"></i></div>
+        <div><b>Иванов Иван</b><small>Основатель проекта</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ARTICLES ===== -->
+<section class="articles">
+  <div class="art-grid">
+    <div class="art-card">
+      <div class="art-img sanctions"><span>Какойто заголовок в несколько строк</span></div>
+      <p>Как оплатить иностранные сервисы и подписки из России в 2024 году под санкциями? Подробная инструкция</p>
+    </div>
+
+    <div class="art-center">
+      <div class="dzen"><span class="dzen-icon">⊕</span> Дзен</div>
+      <p>Наши статьи в Яндекс Дзен</p>
+    </div>
+
+    <div class="art-card">
+      <div class="art-img adobe"><span>Какойто заголовок в несколько строк</span></div>
+      <p>Как оплатить Adobe из России в 2024 году под санкциями? Подробная инструкция</p>
+    </div>
+
+    <div class="art-card wide">
+      <div class="art-img surprise"><span>Какойто заголовок в несколько строк</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews">
+  <div class="phone">
+    <div class="phone-top">
+      <i class="fas fa-arrow-left"></i>
+      <div><b>Тим Кук</b><small>Только что</small></div>
+    </div>
+    <div class="chat">
+      <div class="msg out">Добрый день</div>
+      <div class="msg out">Вы хотите сделать это по примеру?</div>
+      <div class="msg in">Да, я хотела</div>
+      <div class="msg out">Теперь сообщения остануться</div>
+      <div class="msg in">Привет!</div>
+      <div class="msg out">Слушай. Прости. Айфон. Но это Айфон.</div>
+      <div class="msg out">Надеюсь тебе это не расстроит.</div>
+      <div class="msg in">Только не молчи и скажи что ты думаешь. Прошу</div>
+    </div>
+  </div>
+
+  <div class="rev-center"><h2>Люди о нас</h2><p>Наши статьи в Яндекс Дзен</p></div>
+
+  <div class="ss-grid">
+    <div class="ss">
+      <div class="ss-head"><i class="fas fa-user-circle"></i> Тим Кук</div>
+      <div class="ss-msg out">Вы хотите сделать по примеру 10 ₽</div>
+      <div class="ss-msg in">Привет!</div>
+      <div class="ss-msg out">Слушай. Прости. Айфон.</div>
+      <div class="ss-msg in">Надеюсь тебя не расстроит.</div>
+    </div>
+    <div class="ss">
+      <div class="ss-head green"><i class="fas fa-user-circle"></i> Чудесный кот</div>
+      <div class="ss-msg out">Оплачивал на Ю, не вышло, вернул...</div>
+      <div class="ss-msg in">Привет!</div>
+      <div class="ss-msg out">Только не молчи</div>
+      <div class="ss-msg in">Хорошо!</div>
+    </div>
+    <div class="ss">
+      <div class="ss-head"><i class="fas fa-user-circle"></i> Разработчик VL</div>
+      <div class="ss-msg out">Я тебя, пожалуй, волнует этот адрес на YouTube</div>
+      <div class="ss-msg in">Там его нет!</div>
+    </div>
+    <div class="ss">
+      <div class="ss-head purple"><i class="fas fa-user-circle"></i> Сэрик</div>
+      <div class="ss-msg out">Я хорошо!</div>
+      <div class="ss-msg in">Хорошо!</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>© 2024 Виртуальная карта VISA. Все права защищены.</p>
+</footer>
 
 </body>
 </html>
