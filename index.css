@@ -1,0 +1,565 @@
+/* ============================================================
+   ROOT VARIABLES
+   ============================================================ */
+:root {
+  --purple-start: #7c3aed;
+  --purple-mid: #8b5cf6;
+  --purple-end: #a78bfa;
+  --hero-bg-start: #6d28d9;
+  --hero-bg-end: #8b5cf6;
+  --dark-bg: #1a1a2e;
+  --darker-bg: #15151f;
+  --card-bg: #2d2d44;
+  --card-border: rgba(255,255,255,0.08);
+  --pill-bg: rgba(255,255,255,0.18);
+  --pill-border: rgba(255,255,255,0.25);
+  --text-white: #ffffff;
+  --text-muted: rgba(255,255,255,0.65);
+  --accent-violet: #7c3aed;
+  --btn-purple: #7c3aed;
+  --tg-blue: #3b82f6;
+  --font-main: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-main);
+  background: var(--darker-bg);
+  color: var(--text-white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 48px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.9);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.work-hours {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 10px;
+}
+
+.work-label {
+  color: rgba(255,255,255,0.55);
+  font-size: 9px;
+}
+
+.work-time {
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.tg-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--tg-blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 30px;
+  letter-spacing: 0.2px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.tg-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.tg-btn .fab {
+  font-size: 14px;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero {
+  min-height: 520px;
+  background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 40%, #a78bfa 70%, #c4b5fd 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle radial glow overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(139,92,246,0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---- TITLE ---- */
+.hero-title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  line-height: 1.45;
+  max-width: 680px;
+  text-shadow: 0 2px 16px rgba(60,10,120,0.25);
+  letter-spacing: -0.2px;
+}
+
+/* ============================================================
+   CARD WIDGET
+   ============================================================ */
+.card-widget {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---- BALANCE PILLS ---- */
+.balance-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.balance-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  min-width: 72px;
+}
+
+.balance-pill:hover {
+  background: rgba(255,255,255,0.28);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.balance-pill .try {
+  font-size: 9px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.balance-pill .usd {
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* ---- CARD VISUAL ---- */
+.card-visual {
+  width: 240px;
+  height: 148px;
+  background: linear-gradient(140deg, #2e2e4a 0%, #1e1e38 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.45), 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 18px 12px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Decorative glow inside card */
+.card-visual::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(139,92,246,0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.card-chip-wave {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chip {
+  width: 30px;
+  height: 22px;
+  background: linear-gradient(135deg, #c8a800 0%, #f5d020 50%, #c8a800 100%);
+  border-radius: 4px;
+  position: relative;
+}
+
+.chip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 50%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 2px;
+}
+
+.wave-icon {
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  transform: rotate(90deg);
+}
+
+/* Card balance */
+.card-balance-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.balance-label {
+  font-size: 8px;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.balance-try {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
+
+.balance-usd-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.balance-usd {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.dropdown-btn {
+  background: rgba(255,255,255,0.12);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(255,255,255,0.7);
+  font-size: 9px;
+  transition: background 0.2s;
+}
+
+.dropdown-btn:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+/* VISA logo */
+.card-logo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.visa-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+
+/* ============================================================
+   BUY BUTTON
+   ============================================================ */
+.buy-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.buy-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(90deg, #7c3aed, #6d28d9);
+  color: #fff;
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 32px;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(124,58,237,0.55);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.buy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(124,58,237,0.7);
+}
+
+.btn-price {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.btn-price sup {
+  font-size: 12px;
+  vertical-align: super;
+  font-weight: 700;
+}
+
+.exchange-note {
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.2px;
+}
+
+/* ============================================================
+   BRANDS / MARQUEE SECTION
+   ============================================================ */
+.brands-section {
+  background: #1a1a2e;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ---- MARQUEE WRAPPER ---- */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 0;
+  background: #1c1c30;
+}
+
+/* ---- TOP MARQUEE ---- */
+.top-marquee {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ---- MARQUEE TRACK ---- */
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+  animation: marquee-left 28s linear infinite;
+  width: max-content;
+}
+
+.marquee-track.reverse {
+  animation: marquee-right 26s linear infinite;
+}
+
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ---- BRAND ITEMS ---- */
+.brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.5px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  text-transform: uppercase;
+  font-family: var(--font-main);
+  transition: color 0.2s;
+  cursor: default;
+}
+
+.brand-item:hover {
+  color: rgba(255,255,255,0.75);
+}
+
+.brand-item .fab {
+  font-size: 16px;
+}
+
+.adobe-a {
+  font-weight: 900;
+  font-size: 18px;
+  color: #e64;
+}
+
+/* ---- MIDDLE ROW ---- */
+.middle-row {
+  display: flex;
+  align-items: stretch;
+  min-height: 100px;
+}
+
+.left-half, .right-half {
+  flex: 1;
+  overflow: hidden;
+  background: #1c1c30;
+  display: flex;
+  align-items: center;
+}
+
+/* ---- STATS BLOCK ---- */
+.stats-block {
+  flex-shrink: 0;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px 28px;
+  background: #1a1a2e;
+  border-left: 1px solid rgba(255,255,255,0.06);
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.stats-number {
+  font-size: 64px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.stats-text {
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  font-weight: 400;
+  margin-top: 4px;
+  font-family: var(--font-body);
+}
+
+/* ============================================================
+   RESPONSIVE (basic)
+   ============================================================ */
+@media (max-width: 860px) {
+  .navbar {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .hero-title {
+    font-size: 18px;
+    padding: 0 16px;
+  }
+
+  .card-widget {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .balance-options {
+    flex-direction: row;
+  }
+
+  .left-options, .right-options {
+    flex-direction: row;
+  }
+
+  .stats-block {
+    width: 200px;
+    padding: 14px 16px;
+  }
+
+  .stats-number {
+    font-size: 44px;
+  }
+}
